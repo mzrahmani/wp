@@ -1,3 +1,4 @@
+<?php
 /*
  * Create a column. And maybe remove some of the default ones
  * @param array $columns Array of all user table columns {column ID} => {column Name} 
@@ -46,3 +47,4 @@ add_filter( 'manage_users_sortable_columns', 'rudr_make_registered_column_sortab
 function rudr_make_registered_column_sortable( $columns ) {
 	return wp_parse_args( array( 'registration_date' => 'registered' ), $columns );
 }
+?>
