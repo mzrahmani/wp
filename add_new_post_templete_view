@@ -27,4 +27,9 @@ function prefix_url_rewrite_templates() {
 }
  
 add_action( 'template_redirect', 'prefix_url_rewrite_templates' );
+
+// how to get page link in the page template as get_permilink works in wrong way 
+global $wp;
+$current_url = home_url( add_query_arg( array(), $wp->request ) );
+
 ?>
